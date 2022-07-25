@@ -8,12 +8,6 @@ export default function useCompanies() {
     const router = useRouter()
     const errors = ref('')
 
-    const getCompaniesExports = async () => {
-        let response = await axios.get('/export-users')
-        console.log(response)
-        // companies.value = response.data.data;
-    }
-
     const getCompanies = async () => {
         let response = await axios.get('/api/companies')
         companies.value = response.data.data;
@@ -57,7 +51,6 @@ export default function useCompanies() {
         companies,
         company,
         errors,
-        getCompaniesExports,
         getCompanies,
         getCompany,
         storeCompany,

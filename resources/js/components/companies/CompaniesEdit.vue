@@ -63,8 +63,9 @@ export default {
             type: String
         }
     },
-
+ 
     setup(props) {
+
         const { errors, company, getCompany, updateCompany } = useCompanies()
 
         onMounted(getCompany(props.id))
@@ -78,6 +79,7 @@ export default {
             company,
             saveCompany
         }
-    }
+    },
+    
 }
 </script>
